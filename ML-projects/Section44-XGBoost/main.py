@@ -22,15 +22,3 @@ print(ac_sc)
 accuracies = cross_val_score(estimator=classifier, X=X_train, y=y_train, cv=10)
 print("Accuracy: {:.2f} %".format(accuracies.mean()*100))
 print("Standard Deviation: {:.2f} %".format(accuracies.std()*100))
-
-# parameters = [{"C": [0.25, 0.5, 0.75, 1], "kernel": ['linear']},
-#               {"C": [0.25, 0.5, 0.75, 1], "kernel": ['rbf'], "gamma": [x/10 for x in range(1, 10)]}]
-#
-# grid_search = GridSearchCV(estimator=classifier, param_grid=parameters, scoring='accuracy', cv=10, n_jobs=-1)
-#
-# grid_search.fit(X_train, y_train)
-# best_accuracy = grid_search.best_score_
-# best_parameters = grid_search.best_params_
-#
-# print("Best Accuracy: {:.2f} %".format(best_accuracy*100))
-# print("Best Parameters:", best_parameters)
